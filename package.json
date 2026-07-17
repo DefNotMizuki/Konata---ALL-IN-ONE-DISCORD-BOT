@@ -1,0 +1,41 @@
+{
+  "name": "konata",
+  "version": "0.1.0",
+  "description": "Konata - ALL IN ONE DISCORD BOT (Phase 1 scaffold)",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "seed": "ts-node ./scripts/seed.ts",
+    "lint": "eslint './src/**/*.ts'",
+    "test": "jest",
+    "register-slash": "ts-node scripts/registerSlashCommands.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": ["discord","economy","bot","konata"],
+  "author": "DefNotMizuki",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/rest": "^1.7.0",
+    "discord-api-types": "^0.37.34",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "ioredis": "^5.3.2",
+    "mongoose": "^7.6.0",
+    "bullmq": "^2.13.0",
+    "pretty-ms": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.6",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.2",
+    "eslint": "^8.47.0",
+    "jest": "^29.6.4",
+    "@types/jest": "^29.5.3"
+  }
+}
